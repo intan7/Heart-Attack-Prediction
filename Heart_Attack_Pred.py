@@ -80,10 +80,10 @@ df['thall']=df['thall'].replace(0,np.nan) #replacing out of range value to NaN
 df['caa']=df['caa'].replace(4,np.nan) #replacing out of range value to NaN
 df.isna().sum() #total of 7 NANs
 
-df['thall']=df['thall'].fillna(df['thall'].mode()[0])
-df['caa']=df['caa'].fillna(df['caa'].mode()[0])
+df['thall']=df['thall'].fillna(df['thall'].mode()[0]) #replacing NaN with mode
+df['caa']=df['caa'].fillna(df['caa'].mode()[0]) #replacing NaN with mode
 
-df.isna().sum()
+df.isna().sum() #NaN no longer available
 
 #3) Duplicated
 df.duplicated().sum() #there's 1 duplicate
@@ -110,6 +110,7 @@ for i in cat_col:
  
 print(selected_features)
 
+#Selected features are 'age', 'thalachh', 'oldpeak', 'cp', 'exng', 'caa', 'thall'
 #%% Step 5) Data preprocessing
 
 df=df.loc[:,selected_features]
@@ -232,10 +233,10 @@ disp.plot(cmap=plt.cm.Blues)
 plt.show()
 
 
-#%%
+#%%From confusion matrix calculate accuracy,Sensitivity and Specificity
 
 total=sum(sum(cm))
-#####from confusion matrix calculate accuracy
+
 accuracy=(cm[0,0]+cm[1,1])/total
 print ('Accuracy : ', accuracy)
 
