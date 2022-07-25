@@ -20,6 +20,11 @@ resting electrocardiographic results, and maximum heart rate achieved.
 
 # 📙 Requirement
 >> ![Spyder](https://img.shields.io/badge/Spyder-838485?style=for-the-badge&logo=spyder%20ide&logoColor=maroon)
+>>
+>>  - To run streamlit, you need to open to your cmd/terminal and go to the file directory containing your streamlit app file.
+>>  - Then, type streamlit run streamlit.py file.
+>>  - Your browser then will automatically open your app.
+![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/run_streamlit.png)
 
 # Streamlit App
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/app.gif)
