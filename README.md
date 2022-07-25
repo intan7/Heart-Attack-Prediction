@@ -26,6 +26,7 @@ resting electrocardiographic results, and maximum heart rate achieved.
 
 # Test App
 Below is the data tested on the Streamlit App and 9/10 datasets able to predict the same output as True Output which given the accuracy of the app as 90%.
+
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/test.jpg)
 
 # Results
