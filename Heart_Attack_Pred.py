@@ -230,6 +230,21 @@ labels=['Low Chance','High Chance']
 disp=ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=labels)
 disp.plot(cmap=plt.cm.Blues)
 plt.show()
+
+
+#%%
+
+total=sum(sum(cm))
+#####from confusion matrix calculate accuracy
+accuracy=(cm[0,0]+cm[1,1])/total
+print ('Accuracy : ', accuracy)
+
+sensitivity = cm[0,0]/(cm[0,0]+cm[0,1])
+print('Sensitivity : ', sensitivity)
+
+specificity = cm[1,1]/(cm[1,0]+cm[1,1])
+print('Specificity : ', specificity)
+
 #%% Model Saving
 
 BEST_ESTIMATOR_SAVE_PATH=os.path.join(os.getcwd(),'model','best_estimator.pkl')
