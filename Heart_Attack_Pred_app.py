@@ -11,7 +11,10 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 
+
 MODEL_PATH=os.path.join(os.getcwd(),'model','best_estimator.pkl')
+
+#%%
 with open(MODEL_PATH,'rb') as file:
     model=pickle.load(file)
     

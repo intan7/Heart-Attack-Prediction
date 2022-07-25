@@ -210,8 +210,7 @@ pipeline_mms_lr = Pipeline([
                             ]) #Pipeline([STEPS])
 
 grid_param=[{'Logistic_Classifier__C':np.arange(1,5,.1),
-             'Logistic_Classifier__intercept_scaling':np.arange(1,10,1),
-             'Logistic_Classifier__solver':['newton-cg','lbfgs','liblinear','sag','saga']}]
+             'Logistic_Classifier__intercept_scaling':np.arange(1,10,1)}]
 
 gridsearch=GridSearchCV(pipeline_mms_lr, grid_param,cv=5,verbose=1,n_jobs=-1)
 grid=gridsearch.fit(X_train,y_train)
@@ -222,7 +221,7 @@ print(grid.best_params_)
 best_model=grid.best_estimator_
 #%%Model evaluation
 
-y_pred=best_model.predict(X_test)
+y_pred=grid.predict(X_test)
 print(classification_report(y_test, y_pred))
 
 cm=confusion_matrix(y_test,y_pred)
