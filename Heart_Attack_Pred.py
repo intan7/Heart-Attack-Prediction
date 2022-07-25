@@ -5,13 +5,13 @@ Created on Mon Jul 25 09:31:05 2022
 @author: intan
 """
 
-from sklearn.model_selection import GridSearchCV, RandomizedSearchCV,train_test_split
+
+from sklearn.metrics import classification_report,ConfusionMatrixDisplay,confusion_matrix
 from sklearn.ensemble import GradientBoostingClassifier,RandomForestClassifier
+from sklearn.model_selection import GridSearchCV,train_test_split
 from sklearn.preprocessing import MinMaxScaler,StandardScaler
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import KNNImputer,IterativeImputer
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.svm import SVC
@@ -69,8 +69,6 @@ for i in cat_col:
 
 df.boxplot(figsize=(11,7))
 
-
-
 #trtbps and chol have outliers
 
 #%%3) Data cleaning
@@ -105,9 +103,9 @@ for i in con_col:
         
 for i in cat_col:
     print(i)
-    confusion_matrix=pd.crosstab(df[i], df['output']).to_numpy()
-    print(cramers_corrected_stat(confusion_matrix))
-    if cramers_corrected_stat(confusion_matrix)> 0.4:
+    conf_matrix=pd.crosstab(df[i], df['output']).to_numpy()
+    print(cramers_corrected_stat(conf_matrix))
+    if cramers_corrected_stat(conf_matrix)> 0.4:
         selected_features.append(i)
  
 print(selected_features)
@@ -223,13 +221,13 @@ print(grid.best_params_)
 
 best_model=grid.best_estimator_
 #%%Model evaluation
-from sklearn.metrics import classification_report,ConfusionMatrixDisplay,confusion_matrix
+
 y_pred=best_model.predict(X_test)
 print(classification_report(y_test, y_pred))
 
 cm=confusion_matrix(y_test,y_pred)
 
-labels=['less chance','risky']
+labels=['Low Chance','High Chance']
 disp=ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=labels)
 disp.plot(cmap=plt.cm.Blues)
 plt.show()
