@@ -24,23 +24,26 @@ resting electrocardiographic results, and maximum heart rate achieved.
 # Streamlit App
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/app.gif)
 
+# Test App
+Below is the data tested on the Streamlit App and 9/10 datasets able to predict the same output as True Output which given the accuracy of the app as 90%.
+![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/test.jpg)
 
 # Results
-The accuracy of the model is 79%.
+The model accuracy is 0.7912087912087912 and this accuracy can be increased with more data collected, better features selection and model parameter tuning.
 
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/cr.jpg)
+
+In term of sensitivity and specificity, the number are 0.7045454545454546 and 0.8723404255319149 respectively which means the model has ability to correctly identify patients with a low chance of heart attack for 70% and the ability to correctly identify people with high chance of heart attack for 87%.
+
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/cm.jpg)
 
 
 
 ## Powered by
-![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 
 
 ## This project is able to successfully run thanks to
- >https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon
+ >https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset
