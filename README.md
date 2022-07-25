@@ -1,5 +1,5 @@
 # Heart Attack Prediction
-> This is the deep learning model to predict the ***chance of a person having heart attack***.
+> This is the machine learning model to predict the ***chance of a person having heart attack***.
 
 # Descriptions
 >Clinicians believe that prevention of heart attack is always better than curing 
@@ -25,7 +25,7 @@ resting electrocardiographic results, and maximum heart rate achieved.
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/app.gif)
 
 # Test App
-Below is the data tested on the Streamlit App and 9/10 datasets able to predict the same output as True Output which given the accuracy of the app as 90%.
+Below is the data tested on the Streamlit App and 9/10 datasets able to predict the same output as True Output which gives the accuracy of the app as 90%.
 
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/test.jpg)
 
@@ -34,7 +34,7 @@ The model accuracy is 0.7912087912087912 and this accuracy can be increased with
 
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/cr.jpg)
 
-In term of sensitivity and specificity, the number are 0.7045454545454546 and 0.8723404255319149 respectively which means the model has ability to correctly identify patients with a low chance of heart attack for 70% and the ability to correctly identify people with high chance of heart attack for 87%.
+In term of sensitivity and specificity, the number are 0.7045454545454546 and 0.8723404255319149 respectively; which means the model has ability to correctly identify patients with a low chance of heart attack for 70% and the ability to correctly identify people with high chance of heart attack for 87%.
 
 ![alt text](https://github.com/intan7/Heart-Attack-Prediction/blob/main/static/cm.jpg)
 
